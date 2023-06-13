@@ -7,4 +7,22 @@ fn main() {
         println!("The value of x in the inner scope is: {x}");
     }
     println!("The value of x is: {x}");
+
+    operations();
+}
+
+fn operations() {
+    let sum = 5 + 10;
+    println!("Sum is: {sum}");
+
+    let difference = 95.5 - 4.3;
+    println!("Difference is: {difference}");
+
+    let quotient = 56.7 / 32.2;
+    let truncated = -5 / 3;
+
+    println!("Quotient is: {quotient} \nTruncated is: {truncated}");
+
+    let remainder = 43 % 5;
+    println!("Remained is: {remainder}");
 }
