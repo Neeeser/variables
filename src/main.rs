@@ -8,10 +8,12 @@ fn main() {
     }
     println!("The value of x is: {x}");
 
-    operations();
-    booleans();
-    tuples();
-    array_out_of_bounds_test();
+    //operations();
+    //booleans();
+    //tuples();
+    //array_out_of_bounds_test();
+    another_function(5);
+    print_labeled_measurements(5, 'h');
 }
 
 fn operations() {
@@ -84,4 +86,15 @@ fn array_out_of_bounds_test() {
     let element = a[index];
 
     println!("The value of the element at index {index} is: {element}");
+}
+
+// Functions
+
+// Rust uses snake case
+fn another_function(x: i32) {
+    println!("The value of x is {x}");
+}
+
+fn print_labeled_measurements(value: i32, unit_label: char) {
+    println!("The measurement is: {value}{unit_label}");
 }
