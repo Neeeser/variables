@@ -98,3 +98,12 @@ fn another_function(x: i32) {
 fn print_labeled_measurements(value: i32, unit_label: char) {
     println!("The measurement is: {value}{unit_label}");
 }
+
+fn expressions() {
+    let y = {
+        let x = 3;
+        x + 1
+    };
+
+    println!("The value of y is: {y}");
+}
