@@ -107,3 +107,87 @@ fn expressions() {
 
     println!("The value of y is: {y}");
 }
+
+fn five() -> i32 {
+    5
+}
+
+fn controlflow() {
+    let number = 3;
+
+    if number < 5 {
+        println!("condition was true");
+    } else if number == 0 {
+        println!("Number is 0");
+    } else {
+        println!("condition was false");
+    }
+}
+
+fn inlineif() {
+    let condition = true;
+    // if condition is true its 5 else its 6
+    let number = if condition { 5 } else { 6 };
+}
+
+fn loops() {
+    // loops forever
+    // loop {
+    //     println!("forever");
+    // }
+
+    loop {
+        println!("once");
+        break;
+    }
+
+    // Loops can return
+
+    let mut counter = 0;
+
+    let result = loop {
+        counter += 1;
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+
+    println!("This is the result {result}");
+}
+
+fn looplabels() {
+    let mut count = 0;
+    // Begins with a single quote
+    'counting_up: loop {
+        println!("count = {count}");
+        let mut remaining = 10;
+
+        loop {
+            println!("remaing = {remaining}");
+            if remaining == 9 {
+                break;
+            }
+            if count == 2 {
+                break 'counting_up;
+            }
+            remaining -= 1;
+        }
+        count += 1;
+    }
+    println!("End count = {count}");
+}
+
+fn forloop() {
+    let a = [10, 20, 30, 40, 50];
+
+    for element in a {
+        println!("the value is: {element}");
+    }
+}
+// in range example
+fn inrange() {
+    for number in (1..4).rev() {
+        println!("{number}!");
+    }
+    println!("LIFTOFF!!!");
+}
